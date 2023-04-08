@@ -1,0 +1,58 @@
+.Navigation {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0px;
+}
+
+.Container {
+  width: 1260px;
+  display: flex;
+  align-items: center;
+}
+
+.Logo {
+  color: #802c6e;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.Search {
+  margin-left: auto;
+  outline: none;
+  border: 2px solid #707070;
+  padding: 10px;
+  border-radius: 8px;
+  font-family: 'Poppins';
+  margin-right: 40px;
+  transition: all 0.3s ease;
+}
+
+.Search:focus {
+  border-color: #802c6e;
+}
+
+.CartWrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.Cart {
+  width: 40px;
+  height: 40px;
+  color: #802c6e;
+}
+
+.Badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}

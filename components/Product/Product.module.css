@@ -1,0 +1,78 @@
+.Product {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  /* border: 1px solid #70707047; */
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: all 0.3s ease;
+}
+
+.Product:hover {
+  box-shadow: #802c6e90 0px 3px 8px;
+  scale: 1.02;
+}
+
+.Image {
+  aspect-ratio: 3/2;
+  object-fit: contain;
+  mix-blend-mode: color-burn;
+  width: 100%;
+}
+
+.Title {
+  text-align: center;
+  font-weight: bold;
+}
+
+.Desc {
+  text-align: center;
+  font-size: 13px;
+  color: #707070;
+}
+
+.Rating {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.Stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Price {
+  font-weight: bold;
+}
+
+.AddCart {
+  background-color: #802c6e;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.AddCart:hover {
+  opacity: 0.7;
+}
+
+
+.CartIcon {
+  width: 25px;
+  height: 25px;
+}

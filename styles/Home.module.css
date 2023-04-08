@@ -1,0 +1,13 @@
+.Container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.Products {
+  width: 1080px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  justify-content: space-between;
+}

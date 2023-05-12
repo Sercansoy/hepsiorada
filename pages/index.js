@@ -15,10 +15,10 @@ const Home = ({ dataProducts }) => {
     dispatch(updateProducts(dataProducts));
   }, []);
 
-
   return (
     <div className={styles.Container}>
       <div className={styles.Products}>
+        a
         {products.map((prod) => (
           <Product key={prod.id} prod={prod} />
         ))}

@@ -1,0 +1,138 @@
+.ProductContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  min-height: 400px;
+}
+
+.ProductInnerContainer {
+  display: flex;
+  width: 1080px;
+  gap: 80px;
+  border: solid 1px #e5e5e5;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 8px;
+}
+
+.ProductImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150%;
+  padding-left: 30px;
+}
+
+.ProductImageContainer img {
+  /* border-radius: 8px;
+
+  aspect-ratio: 2/2;
+  object-fit: contain;
+  mix-blend-mode: color-burn;
+  width: 100%; */
+}
+
+.image {
+  padding: 20px;
+}
+
+.category {
+  margin-bottom: 30px;
+  color: #537ecf;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.description {
+  margin-bottom: 30px;
+}
+
+.Rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: 20px;
+  gap: 6px;
+}
+
+.Stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.price {
+  color: #439e4a;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.ExpandDetailButton {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  color: rgba(75, 85, 99, 1);
+  cursor: pointer;
+  transition: 0.2s ease all;
+}
+
+.ExpandDetailButton:hover {
+  opacity: 0.6;
+}
+
+.ExpandDetailButton span {
+  display: flex;
+  align-items: center;
+}
+
+.ProductInfoContainer {
+  display: flex;
+  padding: 20px 0px;
+  flex-direction: column;
+}
+
+.Cart {
+  display: flex;
+  margin-top: 30px;
+  user-select: none;
+  gap: 10px;
+}
+
+.CartControl {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 2px solid #a8a8a8;
+  border-radius: 6px;
+  padding: 6px;
+}
+
+.control {
+  cursor: pointer;
+}
+
+.control:hover {
+  opacity: 0.7;
+}
+
+.AddCart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  background-color: #802c6e;
+  color: white;
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.AddCart:hover {
+  opacity: 0.7;
+}
+
+.CartIcon {
+  color: white;
+}

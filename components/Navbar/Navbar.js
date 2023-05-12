@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Navbar.module.css";
 import { BsCart4 } from "react-icons/bs";
 import { useSelector } from "react-redux";
+import Link from "next/link";
 
 const Navbar = () => {
   const { cart } = useSelector((state) => state.cart);
@@ -9,7 +10,9 @@ const Navbar = () => {
   return (
     <nav className={styles.Navigation}>
       <div className={styles.Container}>
-        <span className={styles.Logo}>Hepsiorada</span>
+        <Link href={"/"} className={styles.Logo}>
+          Hepsiorada
+        </Link>
         <input className={styles.Search} placeholder="Search..." />
         <div className={styles.CartWrapper}>
           <BsCart4 className={styles.Cart} />

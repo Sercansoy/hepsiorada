@@ -3,12 +3,13 @@ import styles from "./Product.module.css";
 import { BsCartPlusFill, BsStarFill, BsStarHalf } from "react-icons/bs";
 import { useDispatch } from "react-redux";
 import { addProduct } from "@/store/cartSlice";
+import { toast } from "react-toastify";
 
-const Product = ({ prod }) => {
+const Product = ({ prod, onClick }) => {
   const dispatch = useDispatch();
 
   return (
-    <div className={styles.Product}>
+    <div onClick={onClick} className={styles.Product}>
       <img className={styles.Image} src={prod.image} alt="product" />
       <span className={styles.Title}>{prod.title.substring(0, 40)}...</span>
       <span className={styles.Desc}>
@@ -28,7 +29,11 @@ const Product = ({ prod }) => {
       <span className={styles.Price}>{prod.price} ₺</span>
       <button
         className={styles.AddCart}
-        onClick={() => dispatch(addProduct(prod))}
+        onClick={(e) => {
+          e.stopPropagation();
+          dispatch(addProduct(prod));
+          toast.success("Ürün Sepete Eklendi");
+        }}
       >
         <BsCartPlusFill className={styles.CartIcon} />
         Sepete Ekle

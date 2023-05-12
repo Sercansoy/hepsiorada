@@ -6,24 +6,35 @@ import { useDispatch, useSelector } from "react-redux";
 import { updateProducts } from "@/store/productsSlice";
 import { addProduct } from "@/store/cartSlice";
 import Product from "@/components/Product/Product";
+import { useRouter } from "next/router";
+import Head from "next/head";
 
 const Home = ({ dataProducts }) => {
   const { products } = useSelector((state) => state.products);
   const dispatch = useDispatch();
+  const router = useRouter();
 
   useEffect(() => {
     dispatch(updateProducts(dataProducts));
   }, []);
 
   return (
-    <div className={styles.Container}>
-      <div className={styles.Products}>
-        a
-        {products.map((prod) => (
-          <Product key={prod.id} prod={prod} />
-        ))}
+    <>
+      <Head>
+        <title>Hepsiorada</title>
+      </Head>
+      <div className={styles.Container}>
+        <div className={styles.Products}>
+          {products.map((prod) => (
+            <Product
+              onClick={() => router.push(`/product/${prod.id}`)}
+              key={prod.id}
+              prod={prod}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

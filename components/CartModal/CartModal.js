@@ -37,7 +37,7 @@ const CartModal = ({ showCartModal, setShowCartModal }) => {
                   {cartItem.title}...<b>({cartItem.count})</b>
                 </span>
                 <span className={styles.CartItemPrice}>
-                  {cartItem.price * cartItem.count} ₺
+                  {parseFloat(cartItem.price * cartItem.count).toFixed(2)} ₺
                 </span>
                 <button
                   className={styles.CartItemDelete}

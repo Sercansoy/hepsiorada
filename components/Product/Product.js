@@ -31,7 +31,7 @@ const Product = ({ prod, onClick }) => {
         className={styles.AddCart}
         onClick={(e) => {
           e.stopPropagation();
-          dispatch(addProduct({ ...prod, count: 1 }));
+          dispatch(addProduct({ ...prod, count: 1, customCount: 1 }));
           toast.success("Ürün Sepete Eklendi");
         }}
       >

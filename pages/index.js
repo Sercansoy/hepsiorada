@@ -4,7 +4,6 @@ import React, { useEffect } from "react";
 import styles from "@/styles/Home.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { updateProducts } from "@/store/productsSlice";
-import { addProduct } from "@/store/cartSlice";
 import Product from "@/components/Product/Product";
 import { useRouter } from "next/router";
 import Head from "next/head";

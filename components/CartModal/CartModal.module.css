@@ -1,0 +1,73 @@
+.CartModalContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 500px;
+  height: 100vh;
+  transition: all 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  padding: 20px 10px;
+}
+
+.InnerModalContainer {
+  max-height: 100%;
+  overflow: auto;
+}
+
+.ModalHeader {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.ModalHeader span {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.ModalCloseBtn {
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.CartItems {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.CartItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.CartItemImg {
+  aspect-ratio: 2/2;
+  object-fit: contain;
+  mix-blend-mode: color-burn;
+  width: 20%;
+}
+
+.CartItemTitle {
+  width: 40%;
+}
+
+.CartItemPrice {
+  font-weight: bold;
+}
+
+.CartItemDelete {
+  background-color: tomato;
+  color: white;
+  border: none;
+  font-size: 17px;
+  padding: 5px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.CartItemDelete:active {
+  scale: 0.94;
+}

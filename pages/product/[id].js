@@ -16,9 +16,13 @@ import {
 } from "react-headless-accordion";
 import InnerImageZoom from "react-inner-image-zoom";
 import "react-inner-image-zoom/lib/InnerImageZoom/styles.css";
+import { useDispatch } from "react-redux";
+import { addProduct } from "@/store/cartSlice";
+import { toast } from "react-toastify";
 
 const Product = ({ productData }) => {
   const [productCount, setProductCount] = useState(1);
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -104,7 +108,19 @@ const Product = ({ productData }) => {
                   <AiOutlinePlus />
                 </div>
               </div>
-              <div className={styles.AddCart}>
+              <div
+                className={styles.AddCart}
+                onClick={() => {
+                  dispatch(
+                    addProduct({
+                      ...productData,
+                      customCount: productCount,
+                      count: productCount,
+                    })
+                  );
+                  toast.success("Ürün Sepete Eklendi");
+                }}
+              >
                 <BsCartPlusFill className={styles.CartIcon} size={30} />
                 Sepete Ekle
               </div>
